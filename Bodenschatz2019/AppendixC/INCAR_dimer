@@ -1,0 +1,45 @@
+System = Dimer Method
+NWRITE = 1
+LWAVE =  .FALSE.
+LCHARG = .FALSE.
+LVTOT =  .FALSE.
+
+Electronic relaxation
+ENCUT  = 400
+ALGO   = Fast
+ISMEAR = 0
+SIGMA  = 0.100
+PREC   = accurate
+LREAL  = Auto
+ROPT   = 2e-4  2e-4  2e-4  2e-4
+ISTART = 2
+NELM   = 100
+NELMDL = -8
+ISPIN  = 1
+
+Ionic relaxation
+NSW    = 100
+ISIF   = 2
+NFREE  = 10
+
+Dispersion
+LVDW = .TRUE.
+VDW_C6 = 42.440 1.750 0.700 0.140
+VDW_R0 = 1.750 1.452 1.342 1.001
+
+Implicit Solvation
+LSOL = .FALSE.
+
+DOS
+RWIGS = 1.300 0.770 0.730 0.320
+
+Dimer
+ICHAIN = 2
+IOPT   = 3
+IBRION = 3
+POTIM  = 0.0
+EDIFF  = 1e-7
+EDIFFG = -0.03
+
+Parallel
+NCORE = 12 
