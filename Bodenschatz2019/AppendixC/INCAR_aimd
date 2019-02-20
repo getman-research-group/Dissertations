@@ -1,0 +1,47 @@
+System  = Ab Initio Molecular Dynamics
+NWRITE  = 1
+LWAVE   = .FALSE.
+LCHARG  = .FALSE.
+LVTOT   = .FALSE.
+
+Electronic Relaxation
+ENCUT   = 400
+ALGO    = Very Fast
+ISMEAR  = 0
+SIGMA   = 0.100
+PREC    = Normal
+LREAL   = Auto
+ROPT    = 2e-4 2e-4 2e-4 2e-4 
+ISTART  = 0
+NELM    = 100
+NELMDL  = -8
+EDIFF   = 1e-5
+ISPIN   = 1
+MAXMIX = 40
+ISYM = 0
+NELMIN = 4
+
+Ionic Relaxation
+NSW     = 100000
+ISIF    = 0
+IBRION  = 0
+POTIM   = 0.5
+NBLOCK  = 10
+
+TEBEG   = 300
+TEEND   = 300
+SMASS   = 0
+
+Dispersion
+LVDW    = .TRUE.
+VDW_C6  = 42.440 0.700 0.140 1.750
+VDW_R0  = 1.750  1.342 1.002 1.452
+ 
+Density of States
+RWIGS   = 1.300  0.730 0.320 0.770
+ 
+Parallel
+NCORE   = 1
+KPAR    = 1
+LPLANE  = .TRUE.
+NSIM    = 4
